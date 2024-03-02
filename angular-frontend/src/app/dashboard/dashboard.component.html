@@ -1,0 +1,50 @@
+<head>
+    <title>Table V01</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="limiter">
+    <div class="container-table100">
+        <div class="container" style="max-width: 100%;">
+            <div style="max-width: 100%;">
+                <a (click)="logout()" class="btn btn-info btn-lg" style="float: right; background-color: red; border-color: red; color:#fff"> Log out </a>
+            </div>
+            <div style="max-width: 100%;">
+                <a id="createBtn" (click)="createUser()" class="btn btn-info btn-lg" style="float: right; margin-right: 10px; visibility: hidden; color:#fff"> Create User </a>
+            </div>
+        </div>
+        <div class="wrap-table100">
+            <div class="table100">
+                <table id="table">
+                    <thead>
+                        <tr class="table100-head">
+                            <th class="column1">User Name</th>
+                            <th class="column2">Full Name</th>
+                            <th class="column3">Email Address</th>
+                            <th class="column4">Role Defined</th>
+                            <th class="column6">
+                                <div id="deleteBtnClm">
+                                    Delete
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of usersData">
+                            <td class="column1">{{ user.userName }}</td>
+                            <td class="column2">{{ user.fullName }}</td>
+                            <td class="column3">{{ user.emailAddress }}</td>
+                            <td class="column4">{{ user.role }}</td>
+                            <td class="column6">
+                                <button style="background: #ff4b5a; padding: 8px 10px; cursor: pointer; font-size: 15px; font-weight: 700; color: #fff; font-family: inherit; border-radius: 5px;" (click)="delete(user.userName)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container" style="max-width: 100%;">
+            <a href="#" style="float: right;"></a>
+        </div>
+    </div>
+</div>

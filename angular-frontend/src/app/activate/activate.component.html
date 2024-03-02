@@ -1,0 +1,42 @@
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Au Register Forms by Colorlib</title>
+</head>
+
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50" style="font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">
+    <div class="wrapper wrapper--w790">
+        <div class="card-5">
+            <div class="card-heading">
+                <h2 class="title">Create Password</h2>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="form-row">
+                        <div class="name">Enter Password</div>
+                        <div class="value">
+                            <span class="iconify btn-show-pass" data-icon="zmdi:eye"></span>
+                            <div class="input-group">
+                                <input class="input--style-5" type="password" name="password" [(ngModel)]="pass">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="name">Retype Password</div>
+                        <div class="value">
+                            <div class="input-group">
+                                <input class="input--style-5" type="password" name="password">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn--radius-2 btn--red" type="button" (click)="activate()">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

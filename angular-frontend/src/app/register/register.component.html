@@ -1,0 +1,75 @@
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Au Register Forms by Colorlib</title>
+</head>
+
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50"
+    style="font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;">
+    <div class="wrapper wrapper--w790">
+        <div class="card-5">
+            <div class="card-heading">
+                <h2 class="title">User Registration</h2>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="form-row">
+                        <div class="name">Full Name</div>
+                        <div class="value">
+                            <div class="input-group">
+                                <input class="input--style-5" type="text" name="fullname" [(ngModel)]="fullName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="name">Email</div>
+                        <div class="value">
+                            <div class="input-group">
+                                <input class="input--style-5" type="email" name="email" [(ngModel)]="email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="name">User Name</div>
+                        <div class="value">
+                            <div class="input-group">
+                                <input class="input--style-5" type="text" name="username" [(ngModel)]="userName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="name">User Roll</div>
+                        <div class="value">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+
+                                    <!-- <mat-select name="subject" id="subject" ngModel>
+                                        <mat-option disabled="disabled" selected="selected">Choose option</mat-option>
+                                        <mat-option *ngFor="let item of items">{{item.name}}</mat-option>
+                                    </mat-select> -->
+                                    <!-- <select name="subject">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option>Subject 1</option>
+                                        <option>Subject 2</option>
+                                        <option>Subject 3</option>
+                                    </select> -->
+                                    <select name ="xyz" type="number" [(ngModel)]="selectedLevel">
+                                        <option *ngFor="let c of items" [ngValue]="c.name">{{c.name}}</option>
+                                      </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn--radius-2 btn--red" type="submit" (click)="createData()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end document-->
